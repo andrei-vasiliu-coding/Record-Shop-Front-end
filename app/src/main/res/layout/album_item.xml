@@ -1,0 +1,89 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="album"
+            type="com.northcoders.recordshopfront_end.model.Album" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        cardview:cardElevation="4dp"
+        cardview:cardCornerRadius="10dp"
+        cardview:cardBackgroundColor="@color/light_yellow">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Album Title -->
+            <TextView
+                android:id="@+id/albumTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{album.title}"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Album Artist -->
+            <TextView
+                android:id="@+id/albumArtist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{album.artist}"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="italic"
+                app:layout_constraintTop_toBottomOf="@id/albumTitle"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Album Genre -->
+            <TextView
+                android:id="@+id/albumGenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{album.genre}"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="italic"
+                app:layout_constraintTop_toBottomOf="@id/albumArtist"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Album Release Year -->
+            <TextView
+                android:id="@+id/albumReleaseYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{album.releaseYear}"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="italic"
+                app:layout_constraintTop_toBottomOf="@id/albumGenre"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Album Description -->
+            <TextView
+                android:id="@+id/albumDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{album.description}"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="italic"
+                app:layout_constraintTop_toBottomOf="@id/albumReleaseYear"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
