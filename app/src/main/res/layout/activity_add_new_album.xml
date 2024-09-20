@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="album"
+            type="com.northcoders.recordshopfront_end.model.Album" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        tools:context=".ui.addalbum.AddNewAlbumActivity">
+
+        <TextView
+            android:id="@+id/albumDescription"
+            android:layout_width="323dp"
+            android:layout_height="44dp"
+            android:background="@color/light_yellow"
+            android:text="@={album.description}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/albumReleaseYear"
+            app:layout_constraintVertical_bias="0.056" />
+
+        <TextView
+            android:id="@+id/albumGenre"
+            android:layout_width="323dp"
+            android:layout_height="44dp"
+            android:background="@color/light_yellow"
+            android:text="@={album.genre}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/albumArtist"
+            app:layout_constraintVertical_bias="0.053" />
+
+        <TextView
+            android:id="@+id/albumReleaseYear"
+            android:layout_width="323dp"
+            android:layout_height="44dp"
+            android:background="@color/light_yellow"
+            android:text="@={album.releaseYear}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/albumGenre"
+            app:layout_constraintVertical_bias="0.046" />
+
+        <TextView
+            android:id="@+id/albumTitle"
+            android:layout_width="323dp"
+            android:layout_height="44dp"
+            android:background="@color/light_yellow"
+            android:text="@={album.title}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/albumArtist"
+            android:layout_width="323dp"
+            android:layout_height="44dp"
+            android:background="@color/light_yellow"
+            android:text="@={album.artist}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/albumTitle"
+            app:layout_constraintVertical_bias="0.039" />
+
+        <Button
+            android:id="@+id/addAlbumButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_album"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.607" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.123"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.911"
+            app:srcCompat="@android:drawable/ic_menu_revert" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
